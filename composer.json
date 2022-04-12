@@ -1,0 +1,45 @@
+{
+    "name": "kafkiansky/push-prometheus",
+    "description": "Pushing metrics to prometheus via amphp.",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "prometheus",
+        "amphp",
+        "php",
+        "pushgateway"
+    ],
+    "autoload": {
+        "psr-4": {
+            "Kafkiansky\\PushPrometheus\\": "src/"
+        },
+        "files": [
+            "src/functions.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Kafkiansky\\PushPrometheus\\Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "v.zanfir",
+            "email": "vadimzanfir@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "scripts": {
+        "lint": "./vendor/bin/psalm --no-cache",
+        "test": "./vendor/bin/phpunit --do-not-cache"
+    },
+    "require": {
+        "php": "^8.1",
+        "amphp/http-client": "^4.6",
+        "psr/log": "^3.0"
+    },
+    "require-dev": {
+        "vimeo/psalm": "^4.22",
+        "phpunit/phpunit": "^9.5"
+    }
+}
